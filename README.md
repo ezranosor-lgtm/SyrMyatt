@@ -1,2 +1,0 @@
-# SyrMyatt
-Rank boost
