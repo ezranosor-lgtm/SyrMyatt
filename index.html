@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Rank Boost Service</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0d0d0d;
+            color: #fff;
+        }
+
+        header {
+            background-color: #1a1a1a;
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            color: #00ffcc;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            background-color: #111;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #00ffcc;
+        }
+
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .service-card {
+            background-color: #1a1a1a;
+            border: 2px solid #00ffcc;
+            padding: 20px;
+            width: 250px;
+            border-radius: 10px;
+        }
+
+        /* Order Button (<a> tag) အတွက် ဒီဇိုင်း */
+        .order-link-button {
+            background-color: #00ffcc;
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            display: inline-block;
+            text-decoration: none;
+            color: #0d0d0d; 
+        }
+
+        .order-link-button:hover {
+            background-color: #00cc99;
+        }
+        
+        /* မလိုအပ်တော့သည့် button tag ကို ဖျောက်ထားသည် */
+        button {
+            display: none; 
+        }
+
+        /* FAQ Section အတွက် CSS */
+        .faq-item {
+            background-color: #1a1a1a;
+            border: 1px solid #00ffcc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            text-align: left;
+            padding: 15px;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            color: #00ffcc;
+            cursor: pointer;
+            display: block; 
+            padding-bottom: 5px;
+        }
+
+        .faq-answer {
+            margin-top: 10px;
+            padding-top: 5px;
+            border-top: 1px dashed #333;
+            display: none; /* အစကတည်းက ဖျောက်ထားရန် */
+        }
+
+        footer {
+            background-color: #111;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>Game Rank Boost Service</header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home">
+        <h1>Welcome to Our Game Rank Boost Service</h1>
+        <p>We provide fast, secure, and reliable rank boosting for all popular games.</p>
+        <a href="order.html" class="order-link-button">Order Now</a>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <p style="margin-top: -20px; margin-bottom: 40px; color: #ccc;">
+            Fast, safe, and professional rank boosting. See our estimated pricing and timeframes below!
+        </p>
+        <div class="services">
+            
+            <div class="service-card">
+                <h3>Epic to Mythic</h3>
+                <p>Climb fast from Epic ranks up to Mythic with our professional boosters.</p>
+                <p style="color: #00ffcc; font-weight: bold; margin: 5px 0;">Price: $15 (22,500 MMK)</p>
+                <p style="font-size: 14px; margin: 5px 0;">Estimated Time: 1 - 2 Days</p>
+                <a href="order.html" class="order-link-button">Order</a>
+            </div>
+            
+            <div class="service-card">
+                <h3>Mythic to Mythical Glory</h3>
+                <p>We guarantee your placement in the competitive Mythical Glory rank.</p>
+                <p style="color: #00ffcc; font-weight: bold; margin: 5px 0;">Price: $30 (45,000 MMK)</p>
+                <p style="font-size: 14px; margin: 5px 0;">Estimated Time: 3 - 4 Days</p>
+                <a href="order.html" class="order-link-button">Order</a>
+            </div>
+            
+            <div class="service-card">
+                <h3>Mythical Glory to Immortal</h3>
+                <p>Achieve the highest rank, Immortal, with top-tier players.</p>
+                <p style="color: #00ffcc; font-weight: bold; margin: 5px 0;">Price: $50 (75,000 MMK)</p>
+                <p style="font-size: 14px; margin: 5px 0;">Estimated Time: 4 - 7 Days</p>
+                <a href="order.html" class="order-link-button">Order</a>
+            </div>
+
+            <div class="service-card">
+                <h3>Other / Custom Rank</h3>
+                <p>Need a custom boost? Contact us for any specific rank, win-rate, or badge requests.</p>
+                <p style="color: #00ffcc; font-weight: bold; margin: 5px 0;">Price: Negotiable</p>
+                <p style="font-size: 14px; margin: 5px 0;">Estimated Time: Based on Order</p>
+                <a href="order.html" class="order-link-button">Order</a>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="faq">
+        <h2>Frequently Asked Questions (FAQ)</h2>
+        <div class="faq-container" style="max-width: 800px; margin: 0 auto;">
+            
+            <div class="faq-item">
+                <span class="faq-question" onclick="toggleAnswer(this)">1. Is rank boosting safe for my account?</span>
+                <p class="faq-answer">Yes, we prioritize account safety above all else. Our professional boosters use **VPNs** and follow strict non-toxic guidelines to ensure the boosting process is completely secure and undetectable by the game system.</p>
+            </div>
+
+            <div class="faq-item">
+                <span class="faq-question" onclick="toggleAnswer(this)">2. How long does the boosting process take?</span>
+                <p class="faq-answer">The duration depends on your current rank and the desired rank. Generally, the process takes **1 to 7 days** depending on the rank tier. We will provide an estimated time upon order confirmation.</p>
+            </div>
+
+            <div class="faq-item">
+                <span class="faq-question" onclick="toggleAnswer(this)">3. What payment methods do you accept?</span>
+                <p class="faq-answer">We accept various payment methods, including **KBZ Pay, Wave Money**, and major credit/debit cards. Payment details will be provided on the order page.</p>
+            </div>
+
+            <div class="faq-item">
+                <span class="faq-question" onclick="toggleAnswer(this)">4. Can I play on my account during the boost?</span>
+                <p class="faq-answer">To ensure a smooth and fast boost, we highly recommend **not logging in** until the process is complete. If you need to log in for a short period, please coordinate with your booster first.</p>
+            </div>
+            
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: support@gamerankboost.com</p>
+        <p>Telegram: @GameBoostSupport</p>
+    </section>
+
+    <footer>
+        &copy; 2025 Game Rank Boost Service. All rights reserved.
+        <nav>
+            <a href="order.html" class="order-link-button">Order Now</a>
+        </nav>
+    </footer>
+
+    <script>
+        function toggleAnswer(questionElement) {
+            var answer = questionElement.nextElementSibling;
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+            } else {
+                answer.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
