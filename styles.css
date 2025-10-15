@@ -1,0 +1,248 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif; /* Google Font အသစ် */
+    background-color: #0e0e0e; /* ပိုနက်တဲ့ Background */
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    overflow-x: hidden; /* Horizontal Scrollbar မပေါ်အောင် */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header & Navigation */
+.main-header {
+    background-color: #1a1a1a;
+    padding: 15px 0;
+    border-bottom: 2px solid #38b000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #38b000;
+    margin: 0;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 30px;
+}
+
+.main-nav ul li a {
+    color: #a0a0a0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05em;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: #38b000;
+}
+
+/* Page Content */
+.order-page-content {
+    padding: 60px 0;
+    min-height: calc(100vh - 180px); /* Footer အထိ မျက်နှာပြည့်အောင် */
+}
+
+.page-title {
+    font-size: 2.8em;
+    color: #38b000;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.page-title i {
+    margin-right: 10px;
+}
+
+.page-description {
+    text-align: center;
+    color: #a0a0a0;
+    font-size: 1.1em;
+    margin-bottom: 40px;
+}
+
+/* Order Form Card */
+.order-card {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+    border: 1px solid #2a2a2a;
+}
+
+.order-form {
+    display: grid;
+    gap: 30px; /* Sections ကြား အကွာအဝေး */
+}
+
+.form-section h3 {
+    color: #5bc0de; /* ခေါင်းစဉ်ခွဲ အရောင်ပြောင်း */
+    font-size: 1.6em;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.form-section h3 i {
+    margin-right: 10px;
+    color: #38b000; /* Icon အရောင် */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #c0c0c0;
+    font-size: 1.05em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #888;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #38b000; /* Focus လုပ်တဲ့အခါ အစိမ်းရောင် border */
+    box-shadow: 0 0 0 3px rgba(56, 176, 0, 0.3); /* အစိမ်းရောင် glow */
+    outline: none;
+}
+
+.help-text {
+    font-size: 0.9em;
+    color: #888;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Submit Button Style */
+.submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 16px 25px;
+    background-color: #38b000;
+    color: #ffffff;
+    font-size: 1.3em;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn i {
+    margin-right: 10px;
+    font-size: 1.1em;
+}
+
+.submit-btn:hover {
+    background-color: #2b8000;
+    transform: translateY(-2px);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Footer */
+.main-footer {
+    background-color: #1a1a1a;
+    padding: 20px 0;
+    text-align: center;
+    color: #777;
+    font-size: 0.9em;
+    border-top: 1px solid #2a2a2a;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .main-nav ul {
+        margin-top: 15px;
+    }
+    .main-nav ul li {
+        margin: 0 15px;
+    }
+    .page-title {
+        font-size: 2.2em;
+    }
+    .order-card {
+        padding: 25px;
+    }
+    .form-section h3 {
+        font-size: 1.4em;
+    }
+    .submit-btn {
+        font-size: 1.1em;
+        padding: 14px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.5em;
+    }
+    .main-nav ul li {
+        margin: 0 8px;
+    }
+    .page-title {
+        font-size: 1.8em;
+    }
+    .order-card {
+        padding: 15px;
+    }
+    .form-section h3 {
+        font-size: 1.2em;
+    }
+  }
+  
